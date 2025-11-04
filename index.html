@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burgee Wedding</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="public/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Electrolize&family=Genos:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li class="nav-item"><a href="#invitation">Invitation</a></li>
+        <li class="nav-item"><a href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a href="#our-story">Story</a></li>
+      </ul>
+      <ul class="nav-links">
+        <li class="nav-item"><a href="#registry">Registry</a></li>
+        <li class="nav-item">
+          <a href="#rsvp-modal" id="open-modal-2">RSVP</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="invitation">
+      <div class="invitation-content">
+        <div class="invitation-header">
+          <p class="invitation-name" id="her-name">Olivia</p>
+          <p class="invitation-name" id="his-name">Brendan</p>
+        </div>
+        <h2 class="invitation-title">You're Invited!</h2>
+        <p class="invitation-text" id="invitation-date">
+          Please join us for our wedding celebration on
+          <strong>Saturday, October 26th, 2026 at 4:00 PM</strong>
+        </p>
+        <p class="invitation-text" id="invitation-location">
+          @ <strong>Salon Madrid</strong> 6495 Monanco St, Commerce City, CO
+        </p>
+        <p class="invitation-text" id="invitation-rsvp">
+          <a href="#" id="open-modal">RSVP</a> by August 1st, 2026
+        </p>
+      </div>
+    </section>
+    <section id="gallery">
+      <div class="card">
+        <h2 class="card-title">Gallery</h2>
+        <div class="gallery-container" id="carousel">
+          <nav class="gallery-nav">
+            <button class="gallery-button" id="prev">&#10094;</button>
+            <button class="gallery-button" id="next">&#10095;</button>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <section id="our-story">
+      <div class="card">
+        <h2 class="card-title">Our Story</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </section>
+    <div id="rsvp-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="close-modal">&times;</span>
+        <h2 class="form-title">RSVP</h2>
+        <form id="rsvp-form">
+          <label for="invitee-name">Guest Name:</label>
+          <input type="text" id="invitee-name" name="invitee-name" required />
+
+          <label for="guest-count">Guest Count:</label>
+          <div class="custom-number-input">
+            <button type="button" class="decrement">&minus;</button>
+            <input
+              type="number"
+              id="guest-count"
+              name="guest-count"
+              min="0"
+              required
+            />
+            <button type="button" class="increment">&plus;</button>
+          </div>
+
+          <label for="food-allergies">Food Allergies:</label>
+          <textarea id="food-allergies" name="food-allergies"></textarea>
+
+          <div class="modal-buttons">
+            <button type="button" id="close-modal-2">Close</button>
+            <button type="button" id="send-email">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

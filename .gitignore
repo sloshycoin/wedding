@@ -1,0 +1,9 @@
+# Ignore AI instructions
+.copilot-instructions.md
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore log files
+*.log

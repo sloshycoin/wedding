@@ -1,0 +1,313 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Palette and Styles */
+:root {
+  --surface-color: #626262;
+
+  --primary-color: #DEA193;
+  --secondary-color: #620026;
+  --primary-accent-color: #6096BA;
+  --secondary-accent-color: #B0C070;
+
+  --invitation-background-color: black;
+  --text-color: white;
+
+  --border-radius: 4px;
+  --border-weight: 4px;
+
+  --box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Body */
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+  background-color: var(--surface-color);
+}
+
+/* Class Objects */
+.card {
+  background-color: var(--primary-color);
+  padding: 20px;
+  margin: 10px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+.card-title {
+  font-family: "Tangerine", cursive;
+  font-size: 48px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.nav-item a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-item a:hover {
+  text-decoration: underline;
+}
+
+/* Invitation */
+#invitation {
+  background-color: var(--invitation-background-color);
+  padding: 20px;
+  margin: 10px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+.invitation-header {
+  background-image: url("public/ampersand-accent.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 480px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-block: 40px;
+}
+.invitation-name {
+  font-family: "Tangerine", cursive;
+  font-size: 240px;
+  color: var(--text-color);
+  text-shadow: 2px 2px 4px var(--primary-color);
+}
+#her-name {
+  padding-top: 40px;
+}
+#his-name {
+  padding-top: 200px;
+}
+.invitation-content {
+  border: 4px solid var(--secondary-color);
+  padding: 20px;
+  text-align: center;
+}
+.invitation-title {
+  font-family: "Tangerine", cursive;
+  font-size: 64px;
+  padding-block: 40px;
+  color: var(--primary-color);
+}
+.invitation-text {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+#invitation-rsvp {
+  padding-top: 20px;
+}
+#invitation-rsvp a {
+  color: var(--primary-accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+#invitation-rsvp a:hover {
+  text-decoration: underline;
+}
+#invitation strong {
+  color: var(--primary-color);
+}
+
+/* RSVP Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  background-color: var(--primary-color);
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+#rsvp-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+.form-title {
+  font-family: "Tangerine", cursive;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+.close-button {
+  color: var(--surface-color);
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+  position: relative;
+  top: -10px;
+}
+.close-button:hover {
+  color: var(--primary-accent-color);
+}
+.modal-buttons {
+  margin-top: 20px;
+  gap: 10px;
+}
+.modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+#send-email {
+  background-color: var(--secondary-accent-color);
+  color: var(--text-color);
+}
+#send-email:hover {
+  background-color: var(--primary-accent-color);
+}
+#close-modal-2 {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+}
+#close-modal-2:hover {
+  background-color: var(--primary-accent-color);
+}
+
+/* RSVP Modal Input Styling */
+#rsvp-form label {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 5px;
+  align-self: center;
+}
+#rsvp-form input, #rsvp-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  color: var(--surface-color);
+  background-color: var(--text-color);
+}
+#rsvp-form input:focus, #rsvp-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-accent-color);
+  box-shadow: 0 0 5px var(--primary-accent-color);
+}
+#rsvp-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.custom-number-input {
+  display: flex;
+  align-items: center;
+}
+.custom-number-input input[type="number"] {
+  width: 60px;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  margin: 0 5px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.increment {
+  background-color: var(--secondary-accent-color);
+  color: var(--text-color);
+  border: none;
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+.increment:hover {
+  background-color: var(--primary-accent-color);
+}
+.decrement {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+.decrement:hover {
+  background-color: var(--primary-accent-color);
+}
+
+/* Our Story */
+
+/* Gallery */
+#carousel {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+.gallery-button {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  border: none;
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  opacity: 0.7;
+}
+.gallery-button:hover {
+  background-color: var(--primary-accent-color);
+}
