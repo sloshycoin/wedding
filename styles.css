@@ -1,4 +1,4 @@
-/* Reset */
+/* Document */
 * {
   margin: 0;
   padding: 0;
@@ -8,17 +8,17 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Palette and Styles */
+/* Palette */
 :root {
   --surface-color: #626262;
 
-  --primary-color: #DEA193;
-  --secondary-color: #620026;
+  --primary-color: #329A68; /* Shamrock */
+  --secondary-color: #143E29; /* Evergreen */
   --primary-accent-color: #6096BA;
-  --secondary-accent-color: #B0C070;
+  --secondary-accent-color: #EBAE1E; /* Honey */
 
-  --invitation-background-color: black;
-  --text-color: white;
+  --invitation-background-color: #0a0a0a;
+  --text-color: #efede6;
 
   --border-radius: 4px;
   --border-weight: 4px;
@@ -33,7 +33,7 @@ body {
   background-color: var(--surface-color);
 }
 
-/* Class Objects */
+/* Card */
 .card {
   background-color: var(--primary-color);
   padding: 20px;
@@ -45,7 +45,7 @@ body {
 .card-title {
   font-family: "Tangerine", cursive;
   font-size: 48px;
-  color: var(--secondary-color);
+  color: var(--secondary-accent-color);
   margin-bottom: 10px;
 }
 
@@ -104,7 +104,7 @@ body {
   padding-top: 200px;
 }
 .invitation-content {
-  border: 4px solid var(--secondary-color);
+  border: 4px solid var(--primary-color);
   padding: 20px;
   text-align: center;
 }
@@ -134,7 +134,7 @@ body {
   color: var(--primary-color);
 }
 
-/* RSVP Modal */
+/* RSVP */
 .modal {
   display: none;
   position: fixed;
@@ -165,7 +165,7 @@ body {
   font-family: "Tangerine", cursive;
   font-size: 48px;
   font-weight: 700;
-  color: var(--secondary-color);
+  color: var(--secondary-accent-color);
 }
 .close-button {
   color: var(--surface-color);
@@ -205,8 +205,6 @@ body {
 #close-modal-2:hover {
   background-color: var(--primary-accent-color);
 }
-
-/* RSVP Modal Input Styling */
 #rsvp-form label {
   font-size: 20px;
   font-weight: bold;
@@ -276,8 +274,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .decrement:hover {
   background-color: var(--primary-accent-color);
 }
-
-/* Our Story */
 
 /* Gallery */
 #carousel {

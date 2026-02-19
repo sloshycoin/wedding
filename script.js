@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const guests = document.getElementById("guest-count").value;
     const allergies = document.getElementById("food-allergies").value;
 
-    const mailtoLink = `mailto:your-email@example.com?subject=RSVP&body=Name: ${encodeURIComponent(
+    const mailtoLink = `mailto:bustillosburgeewedding@gmail.com?subject=RSVP&body=Name: ${encodeURIComponent(
       name
     )}%0D%0AGuests: ${encodeURIComponent(guests)}%0D%0AFood Allergies: ${encodeURIComponent(
       allergies
