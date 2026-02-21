@@ -21,17 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Send email
-  sendEmailButton.addEventListener("click", () => {
+  sendEmailButton.addEventListener("click", async () => {
     const name = document.getElementById("invitee-name").value;
     const guests = document.getElementById("guest-count").value;
     const allergies = document.getElementById("food-allergies").value;
 
-    const mailtoLink = `mailto:bustillosburgeewedding@gmail.com?subject=RSVP&body=Name: ${encodeURIComponent(
-      name
-    )}%0D%0AGuests: ${encodeURIComponent(guests)}%0D%0AFood Allergies: ${encodeURIComponent(
-      allergies
-    )}`;
-    window.location.href = mailtoLink;
+    const response = await fetch("/.netlify/functions/mailer", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, guests, allergies }),
+    });
+
+    if (response.ok) {
+      alert("RSVP email sent successfully!");
+    } else {
+      alert("Failed to send RSVP email. Please try again later.");
+    }
 
     modal.style.display = "none";
   });
