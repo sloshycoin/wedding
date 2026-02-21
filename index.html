@@ -23,9 +23,11 @@
         <li class="nav-item"><a href="#our-story">Story</a></li>
       </ul>
       <ul class="nav-links">
-        <li class="nav-item"><a href="#registry">Registry</a></li>
         <li class="nav-item">
           <a href="#rsvp-modal" id="open-modal-2">RSVP</a>
+        </li>
+        <li class="nav-item">
+            <button id="translate-button" class="translate-btn">Español</button>
         </li>
       </ul>
     </nav>
@@ -39,16 +41,21 @@
         </div>
         <h2 class="invitation-title">You're Invited!</h2>
         <p class="invitation-text" id="invitation-date">
-          Please join us for our wedding celebration on
-          <strong>Saturday, November 7th, 2026 at 5:00 PM</strong>
+          Please join us for our wedding celebration
         </p>
+        <strong class="invitation-text"
+          >Saturday, November 7th, 2026 at 5:00 PM</strong
+        >
         <p class="invitation-text" id="invitation-location">
           @ <strong>Alison Event Venue</strong> 1913 Mississippi Street, Denver,
           CO
         </p>
-        <p class="invitation-text" id="invitation-rsvp">
-          <a href="#" id="open-modal">RSVP</a> by August 1st, 2026
-        </p>
+        <div class="invitation-rsvp">
+          <a href="#" id="open-modal">RSVP</a>
+          <p class="invitation-text" id="invitation-rsvp-text">
+            by August 1st, 2026
+          </p>
+      </div>
       </div>
     </section>
 
@@ -56,26 +63,33 @@
     <section id="info">
       <div class="card">
         <h2 class="card-title">Guest Information</h2>
-        <p>
+        <p class="invitation-text">
           We are so excited to celebrate this special day with you! Here are
           some details to help you plan your visit:
         </p>
         <ul class="guest-info-list">
           <li>
-            <strong>Dress Code:</strong> Jeans are welcome, ties are optional
-            and wear your best dancing shoes.
+            <strong>Dress Code:</strong>
+            <p>
+              Jeans are welcome, ties are optional and wear your best dancing
+              shoes.
+            </p>
           </li>
           <li>
-            <strong>Parking:</strong> Free parking is available at the venue.
+            <strong>Parking:</strong>
+            <p>Free parking is available at the venue.</p>
           </li>
-          <li><strong>Accommodations:</strong> More information to come...</li>
           <li>
-            <strong>Contact:</strong> If you have any questions, feel free to
-            reach out to us at
-            <a href="mailto:bustillosburgeewedding@gmail.com"
-              >bustillosburgeewedding@gmail</a
-            >
+            <strong>Accommodations:</strong>
+            <p>More information to come...</p>
           </li>
+          <li>
+            <strong>Contact:</strong>
+            <p>If you have any questions, feel free to reach out to us at:</p>
+          </li>
+          <a href="mailto:bustillosburgeewedding@gmail.com"
+            >bustillosburgeewedding@gmail.com</a
+          >
         </ul>
       </div>
     </section>
@@ -85,10 +99,11 @@
       <div class="card">
         <h2 class="card-title">Schedule of Events</h2>
         <ul class="schedule-list">
-          <li><strong>5:00 PM:</strong> Guest Arrival</li>
-          <li><strong>5:30 PM:</strong> Wedding Ceremony</li>
-          <li><strong>6:00 PM:</strong> Dinner Reception</li>
-          <li><strong>9:00 PM:</strong> Dancing & Celebration</li>
+          <li><strong>5:00 PM:</strong><p>Guest Arrival</p></li>
+          <li><strong>5:30 PM:</strong><p>Wedding Ceremony</p></li>
+          <li><strong>6:00 PM:</strong><p>Dinner Reception</p></li>
+          <li><strong>7:30 PM:</strong><p>First Dance & Wedding Events</p></li>
+          <li><strong>9:00 PM:</strong><p>Dancing & Celebration</p></li>
         </ul>
       </div>
     </section>

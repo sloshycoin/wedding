@@ -80,26 +80,46 @@ section {
 /* Navbar */
 .navbar {
   background-color: var(--primary-color);
-  padding: 10px 20px;
+  padding: 8px 20px;
   box-shadow: var(--box-shadow);
   position: sticky;
   top: 0;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 .nav-links {
   list-style: none;
   display: flex;
   gap: 15px;
+  align-items: center;
+  align-content: center;
 }
 .nav-item a {
   color: var(--text-color);
   text-decoration: none;
+  font-size: 20px;
   font-weight: bold;
 }
 .nav-item a:hover {
   color: var(--link-hover-color);
+}
+.translate-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.translate-btn:hover {
+  background-color: #e76f51;
 }
 
 /* Invitation */
@@ -154,15 +174,19 @@ section {
   color: var(--text-color);
   text-align: center;
 }
-#invitation-rsvp {
-  padding-top: 10px;
+.invitation-rsvp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#invitation-rsvp a {
+.invitation-rsvp a {
   color: var(--link-color);
   text-decoration: none;
   font-weight: bold;
+  font-size: 18px;
+  margin-right: 4px;
 }
-#invitation-rsvp a:hover {
+.invitation-rsvp a:hover {
   text-decoration: underline;
   color: var(--link-hover-color);
 }
@@ -352,19 +376,22 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-direction: column;
   border: var(--border-accent);
   border-radius: var(--border-radius);
-  max-width: 360px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 10px;
-  align-items: flex-start;
-  align-content: flex-start;
 }
 .schedule-list li {
+  display: flex;
+  justify-content: flex-start;
+}
+.schedule-list li p {
   font-size: 20px;
   color: var(--secondary-color);
-  margin-bottom: 10px;
 }
 .schedule-list li strong {
   color: var(--secondary-accent-color);
+  font-size: 20px;
+  margin-right: 10px;
 }
 
 /* Guest Information Section */
