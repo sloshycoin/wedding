@@ -112,14 +112,19 @@
     <section id="gallery">
       <div class="card">
         <h2 class="card-title">Gallery</h2>
-        <div class="gallery-container" id="carousel">
-          <nav class="gallery-nav">
-            <button class="gallery-button" id="prev">&#10094;</button>
-            <button class="gallery-button" id="next">&#10095;</button>
-          </nav>
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Thumbnails will be dynamically added here -->
         </div>
       </div>
     </section>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+      <div class="modal-image">
+        <span class="close-button" id="close-image-modal">&times;</span>
+        <img id="modal-image" src="" alt="Enlarged view" />
+      </div>
+    </div>
 
     <!-- Story -->
     <section id="story">
