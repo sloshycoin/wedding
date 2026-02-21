@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,9 +13,12 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar">
       <ul class="nav-links">
         <li class="nav-item"><a href="#invitation">Invitation</a></li>
+        <li class="nav-item"><a href="#guest-info">Guest Info</a></li>
+        <li class="nav-item"><a href="#schedule">Schedule</a></li>
         <li class="nav-item"><a href="#gallery">Gallery</a></li>
         <li class="nav-item"><a href="#our-story">Story</a></li>
       </ul>
@@ -26,6 +29,8 @@
         </li>
       </ul>
     </nav>
+
+    <!-- Invitation -->
     <section id="invitation">
       <div class="invitation-content">
         <div class="invitation-header">
@@ -35,16 +40,60 @@
         <h2 class="invitation-title">You're Invited!</h2>
         <p class="invitation-text" id="invitation-date">
           Please join us for our wedding celebration on
-          <strong>Saturday, November 7th, 2026 at 4:00 PM</strong>
+          <strong>Saturday, November 7th, 2026 at 5:00 PM</strong>
         </p>
         <p class="invitation-text" id="invitation-location">
-          @ <strong>Alison Event Center</strong> 1939 Mississippi Street, Denver, CO
+          @ <strong>Alison Event Venue</strong> 1913 Mississippi Street, Denver,
+          CO
         </p>
         <p class="invitation-text" id="invitation-rsvp">
           <a href="#" id="open-modal">RSVP</a> by August 1st, 2026
         </p>
       </div>
     </section>
+
+    <!-- Information -->
+    <section id="info">
+      <div class="card">
+        <h2 class="card-title">Guest Information</h2>
+        <p>
+          We are so excited to celebrate this special day with you! Here are
+          some details to help you plan your visit:
+        </p>
+        <ul class="guest-info-list">
+          <li>
+            <strong>Dress Code:</strong> Jeans are welcome, ties are optional
+            and wear your best dancing shoes.
+          </li>
+          <li>
+            <strong>Parking:</strong> Free parking is available at the venue.
+          </li>
+          <li><strong>Accommodations:</strong> More information to come...</li>
+          <li>
+            <strong>Contact:</strong> If you have any questions, feel free to
+            reach out to us at
+            <a href="mailto:bustillosburgeewedding@gmail.com"
+              >bustillosburgeewedding@gmail</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section id="schedule">
+      <div class="card">
+        <h2 class="card-title">Schedule of Events</h2>
+        <ul class="schedule-list">
+          <li><strong>5:00 PM:</strong> Guest Arrival</li>
+          <li><strong>5:30 PM:</strong> Wedding Ceremony</li>
+          <li><strong>6:00 PM:</strong> Dinner Reception</li>
+          <li><strong>9:00 PM:</strong> Dancing & Celebration</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Gallery -->
     <section id="gallery">
       <div class="card">
         <h2 class="card-title">Gallery</h2>
@@ -56,15 +105,56 @@
         </div>
       </div>
     </section>
-    <section id="our-story">
+
+    <!-- Story -->
+    <section id="story">
       <div class="card">
         <h2 class="card-title">Our Story</h2>
+        <h3 class="card-subtitle">How We Met</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Brendan and Olivia met nearly seven years ago after signing up for a
+          recreational adult volleyball league—and landing on the same team.
+          After one season together, the next was cut short by the COVID
+          pandemic, and they lost touch as the world slowed down. A couple of
+          years later, when volleyball leagues finally opened back up, they
+          reconnected by joining another league with friends. Before long, they
+          were spending more time together both on and off the court.
+        </p>
+        <p>
+          Brendan would say that their first date happened after a day of
+          volleyball at Cheesman Park, when they went out for ramen. Olivia
+          insists it was not a date—but either way, that evening marked the
+          beginning of something special. Today, they live together in Denver
+          and are excited to start the next chapter of their lives with their
+          puppy (and princess), Marley, by their side.
+        </p>
+        <h3 class="card-subtitle">About Olivia</h3>
+        <p>
+          Olivia works in the heart of Denver as a Quality Assurance Manager for
+          a private medical device production company. She is thoughtful,
+          driven, and deeply values time spent with the people she loves.
+          Outside of work, Olivia enjoys volleyball, brunch outings, and being
+          with family. She brings warmth, balance, and care into every space
+          she’s in—and is often the one making sure everyone feels included and
+          looked after.
+        </p>
+        <h3 class="card-subtitle">About Brendan</h3>
+        <p>
+          Brendan works as a Software Developer and currently works from home.
+          He’s curious, steady, and happiest when building, cooking, or planning
+          the next trip. Outside of volleyball, Brendan enjoys experimenting in
+          the kitchen and traveling whenever possible. He’s a natural
+          problem-solver with a calm presence, and he brings a sense of humor
+          and thoughtfulness to everything he does.
+        </p>
+        <p>
+          Together, they are excited to embark on this new journey and create a
+          beautiful life filled with love, laughter, and adventure.
         </p>
       </div>
     </section>
+
+    <!-- RSVP (Modal) -->
     <div id="rsvp-modal" class="modal">
       <div class="modal-content">
         <span class="close-button" id="close-modal">&times;</span>

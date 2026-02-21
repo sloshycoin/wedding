@@ -14,14 +14,25 @@ html {
 
   --primary-color: #329A68; /* Shamrock */
   --secondary-color: #143E29; /* Evergreen */
-  --primary-accent-color: #6096BA;
+  --primary-accent-color: #EDF7C9; /* Cream */
   --secondary-accent-color: #EBAE1E; /* Honey */
+
+  --button-color: #EBAE1E;
+  --button-hover-color: #1183D0;
+  --button-secondary-color: #626262;
+  --button-secondary-hover-color: #FF6B6B;
+
+  --link-color: #1183D0;
+  --link-hover-color: #EBAE1E;
 
   --invitation-background-color: #0a0a0a;
   --text-color: #efede6;
 
   --border-radius: 4px;
   --border-weight: 4px;
+  --border-primary: var(--border-weight) solid var(--primary-color);
+  --border-secondary: var(--border-weight) solid var(--secondary-color);
+  --border-accent: var(--border-weight) solid var(--primary-accent-color);
 
   --box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
 }
@@ -31,6 +42,15 @@ body {
   font-family: "Montserrat", sans-serif;
   color: var(--text-color);
   background-color: var(--surface-color);
+}
+section {
+  max-width: 1440px;
+  margin: 10px auto;
+}
+#info, #schedule, #gallery, #story {
+  background-color: var(--secondary-color);
+  padding: 10px;
+  border-radius: var(--border-radius);
 }
 
 /* Card */
@@ -46,6 +66,14 @@ body {
   font-family: "Tangerine", cursive;
   font-size: 48px;
   color: var(--secondary-accent-color);
+  margin-bottom: 10px;
+}
+.card-subtitle {
+  color: var(--primary-accent-color);
+  margin-bottom: 10px;
+}
+.card p {
+  color: var(--text-color);
   margin-bottom: 10px;
 }
 
@@ -71,64 +99,72 @@ body {
   font-weight: bold;
 }
 .nav-item a:hover {
-  text-decoration: underline;
+  color: var(--link-hover-color);
 }
 
 /* Invitation */
 #invitation {
+  width: 900px; /* Set a fixed width for the invitation */
+  height: 600px; /* Set a fixed height for the invitation */
+  margin: 40px auto; /* Center the invitation horizontally and add some vertical spacing */
   background-color: var(--invitation-background-color);
   padding: 20px;
-  margin: 10px;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .invitation-header {
   background-image: url("public/ampersand-accent.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 480px auto;
+  background-size: 40%; /* Adjust size to fit within the fixed invitation size */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-block: 40px;
+  padding-block: 20px; /* Adjust padding to fit the fixed size */
 }
 .invitation-name {
   font-family: "Tangerine", cursive;
-  font-size: 240px;
+  font-size: 200px; /* Adjust font size to fit the fixed size */
   color: var(--text-color);
   text-shadow: 2px 2px 4px var(--primary-color);
 }
 #her-name {
-  padding-top: 40px;
+  padding-top: 20px; /* Adjust padding to fit the fixed size */
 }
 #his-name {
-  padding-top: 200px;
+  padding-top: 100px; /* Adjust padding to fit the fixed size */
 }
 .invitation-content {
-  border: 4px solid var(--primary-color);
+  border: var(--border-primary);
   padding: 20px;
   text-align: center;
 }
 .invitation-title {
   font-family: "Tangerine", cursive;
-  font-size: 64px;
-  padding-block: 40px;
-  color: var(--primary-color);
+  font-size: 48px; /* Adjust font size to fit the fixed size */
+  padding-block: 10px; /* Adjust padding to fit the fixed size */
+  color: var(--secondary-accent-color);
 }
 .invitation-text {
-  font-size: 20px;
+  font-size: 18px; /* Adjust font size to fit the fixed size */
   line-height: 1.5;
   color: var(--text-color);
+  text-align: center;
 }
 #invitation-rsvp {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 #invitation-rsvp a {
-  color: var(--primary-accent-color);
+  color: var(--link-color);
   text-decoration: none;
   font-weight: bold;
 }
 #invitation-rsvp a:hover {
   text-decoration: underline;
+  color: var(--link-hover-color);
 }
 #invitation strong {
   color: var(--primary-color);
@@ -147,7 +183,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-content {
-  background-color: var(--primary-color);
+  background-color: var(--primary-accent-color);
   margin: 10% auto;
   padding: 20px;
   width: 80%;
@@ -177,7 +213,7 @@ body {
   top: -10px;
 }
 .close-button:hover {
-  color: var(--primary-accent-color);
+  color: var(--button-secondary-hover-color);
 }
 .modal-buttons {
   margin-top: 20px;
@@ -192,18 +228,18 @@ body {
   font-weight: bold;
 }
 #send-email {
-  background-color: var(--secondary-accent-color);
+  background-color: var(--button-color);
   color: var(--text-color);
 }
 #send-email:hover {
-  background-color: var(--primary-accent-color);
+  background-color: var(--button-hover-color);
 }
 #close-modal-2 {
-  background-color: var(--surface-color);
+  background-color: var(--button-secondary-color);
   color: var(--text-color);
 }
 #close-modal-2:hover {
-  background-color: var(--primary-accent-color);
+  background-color: var(--button-secondary-hover-color);
 }
 #rsvp-form label {
   font-size: 20px;
@@ -249,7 +285,7 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 .increment {
-  background-color: var(--secondary-accent-color);
+  background-color: var(--button-color);
   color: var(--text-color);
   border: none;
   padding: 5px 10px;
@@ -259,10 +295,10 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: bold;
 }
 .increment:hover {
-  background-color: var(--primary-accent-color);
+  background-color: var(--button-hover-color);
 }
 .decrement {
-  background-color: var(--secondary-color);
+  background-color: var(--button-secondary-color);
   color: var(--text-color);
   border: none;
   padding: 5px 10px;
@@ -272,7 +308,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: bold;
 }
 .decrement:hover {
-  background-color: var(--primary-accent-color);
+  background-color: var(--button-secondary-hover-color);
 }
 
 /* Gallery */
@@ -306,4 +342,49 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .gallery-button:hover {
   background-color: var(--primary-accent-color);
+}
+
+/* Schedule Section */
+.schedule-list {
+  background-color: var(--primary-accent-color);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border: var(--border-accent);
+  border-radius: var(--border-radius);
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 10px;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.schedule-list li {
+  font-size: 20px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+.schedule-list li strong {
+  color: var(--secondary-accent-color);
+}
+
+/* Guest Information Section */
+.guest-info-list {
+  list-style: none;
+  padding-top: 10px;
+  margin: 0;
+}
+.guest-info-list li {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+.guest-info-list li strong {
+  color: var(--secondary-accent-color);
+}
+.guest-info-list a {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+.guest-info-list a:hover {
+  text-decoration: underline;
 }
